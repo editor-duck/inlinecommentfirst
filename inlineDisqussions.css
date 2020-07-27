@@ -45,7 +45,7 @@ h1 {
   opacity: 1;
 }
 .disqussion-contain:hover .disqussion a {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 /*
 .disqussion a:after {
