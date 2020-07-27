@@ -307,7 +307,7 @@ function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
     while (i < document.querySelectorAll(".each").length) {
       setDisqussionText(i,100,"before","나의 생각-");
       i = i + 1;
-      setDisqussionText(i,100,"before","질문하기-");
+      setDisqussionText(i,100,"before","Q&A-");
       i = i + 1;
       setDisqussionText(i,100,"before","관련 자료-");
       i = i + 1;
