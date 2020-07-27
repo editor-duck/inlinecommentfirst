@@ -55,23 +55,11 @@ h1 {
 .disqussion-contain:hover .disqussion a {
   opacity: 0.5;
 }
-/*
+
 .disqussion a:after {
-  border-left: 7px solid transparent;
-  border-top: 7px solid #bbbbbb;
-  left: 19px;
-  top: 22px;
-  height: 0;
-  width: 0;
-  display: block;
   content: " ";
-  position: absolute;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
 }
-*/
+
 .disqussion:hover a, .disqussion.hovered a {
   opacity: 1;
   background: #999999;
