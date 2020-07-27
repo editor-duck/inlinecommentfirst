@@ -289,33 +289,34 @@ var disqus_url;
       .addClass('disqussion-highlighted');
 
   };
+	
+function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
+    $("[data-"+iNum+"]").css("width",iWidth+"px");
+    if(sBeforeAfter=="before"){
+      $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comment",""));
+      $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("s",""));
+    }
+    else {
+      $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comments","") + sText);
+    };
+    
+  };
+    
+  window.onload=function(){
+    var i = 0;
+    while (i < document.querySelectorAll(".each").length) {
+      setDisqussionText(i,100,"before","나의 생각-");
+      i = i + 1;
+      setDisqussionText(i,100,"before","질문하기-");
+      i = i + 1;
+      setDisqussionText(i,100,"before","관련 자료-");
+      i = i + 1;
+      setDisqussionText(i,100,"before","드립-");
+      i = i + 1;
+    }; 
+  };
 
 })(jQuery);
-
-
-function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
-  $("[data-"+iNum+"]").css("width",iWidth+"px");
-  if(sBeforeAfter=="before"){
-     $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comments",""));}
-  else{
-    $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comments","") + sText);
-  }
-  }
-  
-  window.onload=function(){
-    var i = 0
-    while (i < document.querySelectorAll(".each").length) {
-      setDisqussionText(i,100,"before","나의 생각-")
-      i = i + 1
-      setDisqussionText(i,100,"before","Q&A-")
-      i = i + 1
-      setDisqussionText(i,100,"before","관련 자료-")
-      i = i + 1
-      setDisqussionText(i,100,"before","유머&풍자-")
-      i = i + 1
-    } 
-  }
-
 
 
 
