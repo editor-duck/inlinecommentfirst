@@ -3,11 +3,17 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   text-align: center;
 }
 
-
+.amargin {
+  margin-right: 5px;
+}
 
 .disqussion {
   padding: 5px 10px 10px;
