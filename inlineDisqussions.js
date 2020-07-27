@@ -311,7 +311,7 @@ function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
       i = i + 1;
       setDisqussionText(i,100,"before","관련 자료-");
       i = i + 1;
-      setDisqussionText(i,100,"before","드립-");
+      setDisqussionText(i,100,"before","유머&풍자-");
       i = i + 1;
     }; 
   };
