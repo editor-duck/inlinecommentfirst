@@ -293,8 +293,8 @@ var disqus_url;
 function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
     $("[data-"+iNum+"]").css("width",iWidth+"px");
     if(sBeforeAfter=="before"){
-      $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comment",""));
-      $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("s",""));
+      $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comments",""));
+      $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comment",""));
     }
     else {
       $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comments","") + sText);
