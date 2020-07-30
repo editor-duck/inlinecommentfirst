@@ -1,0 +1,11 @@
+.contentsTitle{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  #backtomainpage {
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }

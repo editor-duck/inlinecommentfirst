@@ -7,9 +7,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="inlineDisqussions.js"></script>
     <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+    <link rel="stylesheet" type="text/css" href="contents.css" />
     <script>
       
-      disqus_shortname = 'first-inlinecomments'; //여기에 각 페이지마다 다른 shortname
+      disqus_shortname = 'inlinediqustest'; //여기에 각 페이지마다 다른 shortname
 
       jQuery(document).ready(function() {
                 jQuery(".each").inlineDisqussions();
@@ -19,8 +20,10 @@
   </head>
 
   <body>
-    <a href="/ref.html">추가 요소</a>
-    <h1>대한민국 헌법</h1>
+    <div class="contentsTitle">
+      <div id="backtomainpage"><a href="index.html">메인페이지</a></div>
+      <h1>대한민국 헌법</h1>
+    </div>
     
       <div><a class="amargin" id="list1" href="#content1">1.</a>제 1장 총강</div>
       <div><a class="amargin" id="list2" href="#content2">2.</a>제 2장 국민의 권리와 의무</div>
