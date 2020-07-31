@@ -5,32 +5,45 @@
   <title>참고</title>
 </head>
 <body>
-  <h1>북적인</h1>
-  <h4>북적인 안내</h4>
-  -책의 깊이와 액티브를 더해주는 시스템
-  <br>-정의: 전자책 안에서 선택된 영역에 카테고리별로 자유롭게 댓글을 쓰고 읽을 수 있는 플랫폼 시스템
-  <br>-필요한 이유: 책의 신화를 무너뜨리고, 책으로도 놀 수 있게 만들기 위해서
-  <br>-생각할 거리: 대한민국 평균은 5등급이다, 
-
-
-  <h4>안내</h4>
-  -코딩은 6월 중순부터 배우기 시작했습니다.
-  <br>-컴퓨터 웹페이지에 최적화되어 있습니다. 외부 API가 모바일에 대한 고려가 없습니다
-  <br>-해당 페이지는 2021년 7월 31일까지만 운영됩니다.
-  <br>
-
+  <script>
+    
+    var chapter = [
+      '제 1장 총강',
+      '제 2장 국민의 권리와 의무',
+      '제 3장 국회',
+      '제 4장 정부',
+      '제 5장 법원',
+      '제 6장 헌법재판소',
+      '제 7장 선거관리',
+      '제 8장 지방자치',
+      '제 9장 경제',
+      '제 10장 헌법개정',
+      '부칙'
+      ];
+    function listTemplete (chapter, i) {
+      return(`<div><a class="amargin" id="list${i+1}" href="#content${i+1}">${i+1}.</a>${chapter}</div>`)
+    };
+    var i = 0;
+    while (i < chapter.length) {
+        document.write(listTemplete(chapter[i],i))
+        i = i + 1;
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+  </script>
   
-
-  <h4>자체 컨텐츠</h4>
-  -헌법 자체에 대한 게시글: 헌법을 선택한 이유, 관련 생각
-  <br>-코딩을 배우면서 느낀 점 = 완벽한 메타 언어는 없다
-  <br>-놀라운 토요일: 도레미 마켓을 보면서 → 상업음악에서 가사
-  <br>-레드벨벳
-  <br>-자본주의
-  <br>-대한민국 평균은 5등급이다
-
-  <h4>외부 컨텐츠</h4>
-  -은총이 어머니를 통한 저작권 없는 고전 문학
+    <div id="list">
+      <div><a class="amargin" id="list1" href="#content1">1.</a>제 1장 총강</div>
+      <div><a class="amargin" id="list2" href="#content2">2.</a>제 2장 국민의 권리와 의무</div>
+      <div><a class="amargin" id="list3" href="#content3">3.</a>제 3장 국회</div>
+      <div><a class="amargin" id="list4" href="#content4">4.</a>제 4장 정부</div>
+      <div><a class="amargin" id="list5" href="#content5">5.</a>제 5장 법원</div>
+      <div><a class="amargin" id="list6" href="#content6">6.</a>제 6장 헌법재판소</div>
+      <div><a class="amargin" id="list7" href="#content7">7.</a>제 7장 선거관리</div>
+      <div><a class="amargin" id="list8" href="#content8">8.</a>제 8장 지방자치</div>
+      <div><a class="amargin" id="list9" href="#content9">9.</a>제 9장 경제</div>
+      <div><a class="amargin" id="list10" href="#content10">10.</a>제 10장 헌법개정</div>
+      <div><a class="amargin" id="list11" href="#content11">11.</a>부칙</div>
+    </div>
 
 
 </body>

@@ -52,46 +52,27 @@
                     <a href="#">-왜 가사는 잘 안 들릴까(준비중)</a>
                     <a href="#">-대한민국 평균은 5등급이다(준비중)</a>
                     <a href="#">-한국어는 아주 멀쩡하다(준비중)</a>
+                    <a href="#">-한국어≠한글(준비중)</a>
             </div>
         </div>
     </div>
     <br>
     <div class="content1">
-        <span id="subtitle1">책에 액티브와 깊이를 더해 세상을 바꿀 댓글</span>
+        <div id="subtitle1">책에 액티브와 깊이를 더해 세상을 바꿀 댓글</div>
         <div id="bookjukin">북적인</div>
-        <div class="firstbanner">          
-            <table>
-                <tr>
-                    <th>잇다</th>
-                </tr>
-                <tr>
-                    <td><br>작가, 독자, 작품 <br>모두를 잇다</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>넓히다</th>
-                </tr>
-                <tr>
-                    <td><br>책의 공간을 넓히다<br>책의 개념을 넓히다</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>이끌다</th>
-                </tr>
-                <tr>
-                    <td><br>풍부하고 창의적인 <br> 독서로 이끌다</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>더하다</th>
-                </tr>
-                <tr>
-                    <td><br>2차창작과 TMI로 <br>깊이를 더하다</td>
-                </tr>
-            </table>
+        <div class="firstbanner">
+            <script>
+                var head = ['잇다', '넓히다', '이끌다', '더하다'];
+                var dis = ['작가, 독자, 작품<br>모두를 잇다', '책의 공간을 넓히다<br>책의 개념을 넓히다', '풍부하고 창의적인<br>독서로 이끌다', '풍부하고 창의적인<br> 독서를 더하다'];
+                function tableTemplete (head, dis) {
+                  return(`<table><tr><th>${head}</th></tr><tr><td><br>${dis}</td></tr></table>`)
+                };
+                var i = 0;
+                while (i < head.length) {
+                    document.write(tableTemplete(head[i],dis[i]))
+                    i = i + 1;
+                }
+            </script>
         </div>
 
     </div>
