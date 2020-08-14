@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>헌법</title>
+    <meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="inlineDisqussions.js"></script>
+    <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+    <link rel="stylesheet" type="text/css" href="contents.css" />
+    <script>
+      var commentsCathegory = ['나의 생각-', 'Q&A-', '관련 자료-', '유머&풍자-',]//페이지마다 다르게
+      
+      var i = 0;
+      while (i < commentsCathegory.length) {
+        $(document).ready(function(){
+          $("p").after(function(){
+          return (`
+            <span class="each"></span><br>
+          `)
+          });
+        });
+        i = i + 1;
+      }
+      
+      disqus_shortname = 'inlinediqustest'; //여기에 각 페이지마다 다른 shortname
+
+      jQuery(document).ready(function() {
+        jQuery(".each").inlineDisqussions();
+      });
+    </script>
+  
+  </head>
+
+  <body>
+    <div class="contentsTitle">
+      <div id="backtomainpage"><a href="index.html">메인페이지</a></div>
+      <h1>Abuot 헌법</h1>
+      <div><a href="constitution.html">헌법 본문</a></div>
+    </div>
+    <br>
+    <div class="list">
+      <script>
+        var chapter = [
+          '헌법을 선택한 이유', '관습헌법', '헌법 리뷰', '헌법 컨텐츠 활용'
+          ];
+
+    
+        function listTemplete (chapter, i) {
+          return(`<div><a class="amargin" id="list${i+1}" href="#content${i+1}">${i+1}.</a>${chapter}</div>`)
+        };
+        var i = 0;
+        while (i < chapter.length) {
+            document.write(listTemplete(chapter[i],i))
+            i = i + 1;
+        }
+      </script>
+    </div>
+    <div class="contentDiscript">
+    </div>
+  </body>
+</html>
+

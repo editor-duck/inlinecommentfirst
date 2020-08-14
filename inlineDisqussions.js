@@ -289,8 +289,8 @@ var disqus_url;
       .addClass('disqussion-highlighted');
 
   };
-	
-function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
+
+  function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
     $("[data-"+iNum+"]").css("width",iWidth+"px");
     if(sBeforeAfter=="before"){
       $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comments",""));
@@ -301,43 +301,41 @@ function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
     };
     
   };
-    
+
   window.onload=function(){
     var i = 0;
     while (i < document.querySelectorAll(".each").length) {
-      setDisqussionText(i,100,"before","나의 생각-");
-      i = i + 1;
-      setDisqussionText(i,100,"before","Q&A-");
-      i = i + 1;
-      setDisqussionText(i,100,"before","관련 자료-");
-      i = i + 1;
-      setDisqussionText(i,100,"before","유머&풍자-");
+      setDisqussionText(i,100,"before",commentsCathegory[i%commentsCathegory.length]);
       i = i + 1;
     }; 
   };
 
+
 })(jQuery);
-
-
-
 /*
 function setDisqussionText(iNum,iWidth,sBeforeAfter,sText){
-$("[data-"+iNum+"]").css("width",iWidth+"px");
-if(sBeforeAfter=="before"){
-   $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comments",""));}
-else{
-	$("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comments","") + sText);
-}
-}
-
+  $("[data-"+iNum+"]").css("width",iWidth+"px");
+  if(sBeforeAfter=="before"){
+    $("[data-"+iNum+"]").text(sText + $("[data-"+iNum+"]").text().replace("Comments",""));
+    $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comment",""));
+  }
+  else {
+    $("[data-"+iNum+"]").text($("[data-"+iNum+"]").text().replace("Comments","") + sText);
+  };
+  
+};
+  
 window.onload=function(){
-	setDisqussionText(0,100,"before","나의 생각-");
-	setDisqussionText(1,100,"before","Q&A-");
-	setDisqussionText(2,100,"before","관련 자료-");
-  setDisqussionText(3,100,"before","드립-");
-  setDisqussionText(4,100,"before","나의 생각-");
-	setDisqussionText(5,100,"before","Q&A-");
-	setDisqussionText(6,100,"before","관련 자료-");
-	setDisqussionText(7,100,"before","드립-");
-}
+  var i = 0;
+  while (i < document.querySelectorAll(".each").length) {
+    setDisqussionText(i,100,"before","나의 생각-");
+    i = i + 1;
+    setDisqussionText(i,100,"before","Q&A-");
+    i = i + 1;
+    setDisqussionText(i,100,"before","관련 자료-");
+    i = i + 1;
+    setDisqussionText(i,100,"before","유머&풍자-");
+    i = i + 1;
+  }; 
+};
 */
